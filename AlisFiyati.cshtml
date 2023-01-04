@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model AlisFiyati
+<html>
+<head>
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm())
+        {
+            <table>
+                <tr>
+                    <td style="color:darkblue;font-size:20px;"> Alış Fiyatını Giriniz : </td>
+                    <td>@Html.EditorFor(aFiyat => aFiyat.AlisFiyat)</td>
+                </tr>
+                 <tr>
+                    <td style="color:darkblue;font-size:20px;"> Vergi Oranını Giriniz : </td>
+                    <td>@Html.EditorFor(vOrani => vOrani.VergiOrani)</td>
+                </tr>
+                 <tr>
+                    <td style="color:darkblue;font-size:20px;"> Kar Oranını Giriniz : </td>
+                    <td>@Html.EditorFor(kOrani => kOrani.KarOrani)</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Satış Fiyatını Hesapla" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>@ViewBag.Message</td>
+                </tr>
+            </table>
+        }
+    </div>
+</body>
+</html>
+
+
